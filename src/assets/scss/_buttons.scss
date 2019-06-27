@@ -1,0 +1,78 @@
+.btn {
+  display: inline-block;
+  position: relative;
+  min-width: 6em;
+  padding: 1.25em 1em;
+  transition: all 0.2s ease;
+  border-radius: 48px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+
+  &.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  &.hidden,
+  &.d-none {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__solid {
+    border: none;
+    border: 1px solid transparent;
+    background-color: #000;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    &--blue {
+      background-color: $color-samsung-blue;
+
+      &:hover {
+        border: 1px solid $color-samsung-blue;
+        background-color: transparent;
+        color: $color-samsung-blue;
+      }
+    }
+  }
+
+  &__outline {
+    &--black {
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
+    &--light {
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000;
+
+      &:hover .btn__img {
+        transform: translate(5px, -13%);
+      }
+    }
+  }
+}
+
